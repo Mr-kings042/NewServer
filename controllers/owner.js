@@ -250,7 +250,7 @@ const loginOwner = asynchandler(async (req, res) => {
         });
     }
 
-    const token = jwt.sign({ id: user._id, email: user.email }, JWTSECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ id: user._id, email: user.email }, JWTSECRET, { expiresIn: '2h' });
     res.status(200).json({
         token: token
     })

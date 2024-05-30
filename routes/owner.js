@@ -15,7 +15,7 @@ const router = express.Router();
 
 router.get("/", getOwners);
 router.post("/", createOwner);
-router.get("/detial/", verifyToken, getOwner);
+router.get("/detail/", verifyToken, getOwner);
 router.put("/", verifyToken, updateOwner);
 router.patch("/parital/", verifyToken, partialUpdateOwner);
 router.delete("/", verifyToken, deleteOwner);
