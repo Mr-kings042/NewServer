@@ -38,7 +38,7 @@ const createCar = asynchandler(async (req, res) => {
 });
 
 const getCar = asynchandler(async (req, res) => {
-    carId = req.params.id;
+   const carId = req.params.id;
 
     if (carId && mongoose.Types.ObjectId.isValid(carId)) {
         await Car.findById(carId)
@@ -64,7 +64,7 @@ const getCar = asynchandler(async (req, res) => {
 
 const updateCar = asynchandler(async (req, res) => {
     const { brand, model } = req.body;
-    carId = req.params.id;
+    const carId = req.params.id;
 
     let car = await Car.findByIdAndUpdate(
         carId,
@@ -80,7 +80,7 @@ const updateCar = asynchandler(async (req, res) => {
 });
 
 const deleteCar = asynchandler(async (req, res) => {
-    carId = req.params.id;
+   const carId = req.params.id;
 
     await Car.findById(carId)
         .then((car) => {

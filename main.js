@@ -311,3 +311,6 @@ app.use('/cars', require('./routes/car'));
 app.listen(port, () => {
     console.log(`The server is running on port: ${port}...`)
 });
+
+let man = Math.random().toString().slice(2,12);
+console.log(man);
